@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Predicting-Weight-Categorie</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles_home.css') }}">
+</head>
+<body>
+    <nav class="menu-bar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="https://github.com/skprasad117/Predicting-Student-Performance-Using-Machine-Learning" target="_blank">GitHub</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Weight Category Prediction</h1>
+    
+        <form action="{{ url_for('predict_datapoint')}}" method="post">
+
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="" disabled selected>Select gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="family_history_with_overweight">Family History With OverWeight</label>
+                <select id="family_history_with_overweight" name="family_history_with_overweight" required>
+                    <option value="" disabled selected>Select Family History With OverWeight</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="FAVC">Select Frequent consumption of high-caloric food</label>
+                <select id="FAVC" name="FAVC" required>
+                    <option value="" disabled selected>Select Frequent consumption of high-caloric food</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="caec">CAEC : Consumption of food between meals</label>
+                <select id="caec" name="caec" required>
+                    <option value="" disabled selected>Select Consumption of food between meals</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Frequently">Frequently</option>
+                    <option value="Always">Always/option>
+                    <option value="no">no</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="smoke">smoke</label>
+                <select id="smoke" name="smoke" required>
+                    <option value="" disabled selected>Select smoking</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="scc">scc</label>
+                <select id="scc" name="scc" required>
+                    <option value="" disabled selected>Select Calories consumption monitoring</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="calc">calc</label>
+                <select id="calc" name="calc" required>
+                    <option value="" disabled selected>Select Consumption of alcoholcalc</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Frequently">Frequently</option>
+                    <option value="Always">Always</option>
+                    <option value="no">no</option>>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="mtrans">mtrans</label>
+                <select id="mtrans" name="mtrans" required>
+                    <option value="" disabled selected>Select Mode of transportation</option>
+                    <option value="Public_Transportation">Public_Transportation</option>
+                    <option value="Walking">Walking</option>
+                    <option value="Automobile">Automobile</option>
+                    <option value="Motorbike">Motorbike</option>
+                    <option value="Bike">Bike</option>
+
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="age">AGE</label>
+                <input id="age" type="number" name="age" placeholder="Enter your age" step="any"/>
+            </div>
+            
+            <div class="form-group">
+                <label for="height">height</label>
+                <input id="height" type="decimal" name="height" placeholder="Enter your height in m" step="any" />
+            </div>
+
+            <div class="form-group">
+                <label for="weight">weight</label>
+                <input id="weight" type="number" name="weight" placeholder="Enter your weight in kg" step="any" />
+            </div>
+
+            <div class="form-group">
+                <label for="ncp">ncp</label>
+                <input id="ncp" type="number" name="ncp" placeholder="No of main Meals consumed in a day" step="any" />
+            </div>
+
+            <div class="form-group">
+                <label for="FCVC">fcvc</label>
+                <input id="FCVC" type="number" name="FCVC" placeholder="frequency of consumption of vegetables" step="any"/>
+            </div>
+
+            <div class="form-group">
+                <label for="ch2o">ch2o</label>
+                <input id="ch2o" type="number" name="ch2o" placeholder="consuption of water daily" step="any" />
+            </div>
+            <div class="form-group">
+                <label for="faf">faf</label>
+                <input id="faf" type="number" name="faf" placeholder="Enter physical activuty frequncy" step="any" />
+            </div>
+            <div class="form-group">
+                <label for="tue">tue</label>
+                <input id="tue" type="number" name="tue" placeholder="Time using technology devices" />
+            </div>
+            
+            <div class="form-group">
+                <input class="btn-primary" type="submit" value="Predict" required />
+            </div>
+        </form>
+        
+        <h2>
+            The prediction is {{results}}
+        </h2>
+    </div>
+</body>
+</html>

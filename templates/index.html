@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predicting Weight Category</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        ul {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+
+        li strong {
+            font-weight: bold;
+        }
+    </style>
+    <style>
+        .container {
+            /* Add your container styles here */
+        }
+
+        .button-container {
+            /* Add your button container styles here */
+        }
+
+        .btn {
+            /* Add your button styles here */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Weight Category Prediction</h1>
+        <p>This project focuses on predicting obesity types using personal and lifestyle factors. The dataset contains information such as gender, age, height, weight, family history of overweight, dietary habits, physical activity, and more. By analyzing these factors, we aim to develop a machine learning model that accurately classifies individuals into different obesity types. The model's predictions can provide insights into weight-related conditions and aid in developing personalized interventions for managing and preventing obesity-related health issues. This project contributes to understanding the complex relationship between personal attributes, lifestyle choices, and obesity types.</p>
+        <h2>Dataset Features:</h2>
+        <ul>
+            <li><strong>Gender:</strong> Represents the gender of the individual (Female or Male)</li>
+            <li><strong>Age:</strong> Represents the age of the individual (numeric)</li>
+            <li><strong>Height:</strong> Represents the height of the individual (numeric)</li>
+            <li><strong>Weight:</strong> Represents the weight of the individual (numeric)</li>
+            <li><strong>Family History with Overweight:</strong> Indicates family history of overweight (yes or no)</li>
+            <li><strong>FAVC:</strong> Frequent consumption of high-caloric food (yes or no)</li>
+            <li><strong>FCVC:</strong> Frequency of consumption of vegetables (numeric)</li>
+            <li><strong>NCP:</strong> Number of main meals consumed in a day (numeric)</li>
+            <li><strong>CAEC:</strong> Consumption of food between meals (no, Sometimes, Frequently, or Always)</li>
+            <li><strong>Smoking:</strong> Indicates whether the individual smokes or not (yes or no)</li>
+            <li><strong>CH2O:</strong> Consumption of water daily (numeric)</li>
+            <li><strong>SCC:</strong> Calories consumption monitoring (yes or no)</li>
+            <li><strong>FAF:</strong> Physical activity frequency (numeric)</li>
+            <li><strong>TUE:</strong> Time using technology devices (numeric)</li>
+            <li><strong>CALC:</strong> Consumption of alcohol (no, Sometimes, Frequently, or Always)</li>
+            <li><strong>MTRANS:</strong> Mode of transportation (Automobile, Motorbike, Bike, Public_Transportation, or Walking)</li>
+            <li><strong>NObeyesdad(Target Feature):</strong> Obesity level of the individual (Insufficient_Weight, Normal_Weight, Overweight_Level_I, Overweight_Level_II, Obesity_Type_I, Obesity_Type_II, or Obesity_Type_III)</li>
+        </ul>
+        <p>Trained a machine learning model using a dataset.</p>
+        <p>To explore the project further, you can check out the GitHub repository and access the Flask API for making predictions.</p>
+        <div class="button-container">
+            <a href="https://github.com/skprasad117/Predicting-Weight-Categorie.git" class="btn" target="_blank">GitHub Repository</a>
+            <a href="/predictdata" class="btn">Web App</a>
+        </div>
+    </div>
+</body>
+</html>
