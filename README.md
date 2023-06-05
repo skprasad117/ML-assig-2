@@ -1,4 +1,4 @@
-# Predicting Weight Categorie
+# ObesityTypeClassifier: SupervisedML Project
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/skprasad117/Predicting-Weight-Categorie/blob/main/LICENSE)
 
